@@ -21,13 +21,15 @@ const Example = (props) => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md">
+
+            <Navbar color="light" light expand="md" nav-fill >
                 <NavbarBrand href="/">致勝先師</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/secondpage/">關於我們</NavLink>
+
+                            <NavLink href={`/secondpage/`}>關於我們</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
@@ -112,6 +114,7 @@ const Example = (props) => {
 
                 </Collapse>
             </Navbar>
+
         </div>
     );
 }

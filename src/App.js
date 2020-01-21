@@ -7,7 +7,7 @@ function App() {
   return (
 
     <React.Fragment>
-      <AppBar position="fixed">
+      <AppBar position="fixed" color="#0d47a1">
         <Toolbar>{"歡迎來到我的網站demo"}</Toolbar>
       </AppBar>
       <Toolbar />

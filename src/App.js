@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { AppBar, Toolbar, Container, TextField, Button } from '@material-ui/core';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <React.Fragment>
+      <AppBar position="fixed">
+        <Toolbar>{"歡迎來到我的網站demo"}</Toolbar>
+      </AppBar>
+      <Toolbar />
+
+      <Container>
+        <hgroup>
+          <h1>請登入</h1>
+        </hgroup>
+        <form>
+          <div class="group">
+            <TextField id="outlined-basic" label="帳號" variant="outlined" fullWidth="true" />
+          </div>
+          <div class="group">
+            <TextField id="outlined-basic" label="密碼" variant="outlined" fullWidth="true" type="password" />
+          </div>
+          <Button
+            variant="contained"
+            color="default"
+            endIcon={<KeyboardArrowRightIcon />}
+          >
+            登入
+      </Button>
+        </form>
+
+
+      </Container>
+    </React.Fragment>
+
   );
 }
 

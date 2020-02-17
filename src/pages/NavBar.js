@@ -13,29 +13,24 @@ import {
     DropdownItem,
 
 } from 'reactstrap';
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import SecondPage from '../pages/secondpage';
-import App from '../App';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SecondPage from '../secondpage';
 
 
 const Example = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggle = () => setIsOpen(!isOpen);
 
     return (
         <>
-            <BrowserRouter>
+            <Router>
                 <Navbar color="light" light expand="md" nav-fill >
                     <NavbarBrand href="/">致勝先師</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-
-                                <NavLink tag={Link} to="./About"  >關於我們</NavLink>
-
+                                <NavLink href="/about">關於我們</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
@@ -43,14 +38,18 @@ const Example = (props) => {
               </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        瀏覽課表
-                </DropdownItem>
+                                        <NavLink className="dropdown-item" to="/about">
+                                            瀏覽課表
+      </NavLink>
+
+                                    </DropdownItem>
                                     <DropdownItem>
                                         編輯課表
                 </DropdownItem>
 
                                 </DropdownMenu>
-                            </UncontrolledDropdown><UncontrolledDropdown nav inNavbar>
+                            </UncontrolledDropdown>
+                            <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     學生資訊
               </DropdownToggle>
@@ -120,7 +119,14 @@ const Example = (props) => {
 
                     </Collapse>
                 </Navbar>
-            </BrowserRouter>
+
+
+                <Switch>
+                    <Route exact path="/"></Route>
+                    <Route path="/about"> <SecondPage />
+                    </Route>
+                </Switch>
+            </Router>
         </>
     );
 }

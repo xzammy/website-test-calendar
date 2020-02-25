@@ -1,1 +1,3 @@
-# website-test-calendar
+# CodeLab Calendar Web App
+
+## Developed by Code Lab

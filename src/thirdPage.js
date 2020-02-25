@@ -1,9 +1,6 @@
 import React from "react"
 import { Container, TextField, FormControl, InputLabel, Select, MenuItem, Typography, ListSubheader } from "@material-ui/core"
 
-
-
-
 const styles = (theme) => ({
     item: {
         paddingLeft: 3 * theme.spacing.unit,
@@ -14,7 +11,7 @@ const styles = (theme) => ({
     },
 });
 
-class SecondPage extends React.Component {
+class ThirdPage extends React.Component {
 
     render() {
         return (
@@ -22,17 +19,18 @@ class SecondPage extends React.Component {
 
                 <Container maxWidth="sm" style={{ margin: `1em 1em 0 0` }} > <div>
                     <Typography variant="h3" >
-                        新增 學生資訊
+                        新增 教師資訊
 </Typography>
-                    <TextField id="standard-required" label="學生姓名" />
+                    <TextField id="standard-required" label="教師姓名" />
                     <br />
-                    <TextField id="standard-basic" label="家長姓名" />
+                    <TextField id="standard-basic" label="教師電話" />
                     <br />
-                    <TextField id="standard-basic" label="家長電話" />
                     <br />
-                    <TextField id="standard-basic" label="家中電話" />
+                    <Typography variant="h4">授課科目與年級</Typography>
                     <br />
-                    <TextField id="standard-basic" label="帳號名稱" />
+
+                    <br />
+                    <TextField id="standard-basic" label="備註" />
                     <br />
                     <div className={styles}>
                         <FormControl style={{ width: `100%`, height: `100%` }} responsive="true" >
@@ -41,7 +39,6 @@ class SecondPage extends React.Component {
                 </InputLabel>
 
                             <Select
-
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select">
                                 <ListSubheader className={styles.group}>
@@ -96,5 +93,5 @@ class SecondPage extends React.Component {
     }
 }
 
-export default SecondPage
+export default ThirdPage
 

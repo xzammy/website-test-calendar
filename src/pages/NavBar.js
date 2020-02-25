@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SecondPage from '../secondpage';
-
+import ThirdPage from "../thirdPage";
 
 const Example = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -98,20 +98,20 @@ const Example = (props) => {
               </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        新增
-                </DropdownItem>
+                                        <NavLink href="/teacher">新增</NavLink>
+                                    </DropdownItem>
                                     <DropdownItem>
-                                        修改
-                </DropdownItem>
+                                        <NavLink href="/teacher">修改</NavLink>
+                                    </DropdownItem>
                                     <DropdownItem>
-                                        刪除
-                </DropdownItem>
+                                        <NavLink href="/teacher">刪除</NavLink>
+                                    </DropdownItem>
                                     <DropdownItem>
-                                        查詢
-                </DropdownItem>
+                                        <NavLink href="/teacher">查詢</NavLink>
+                                    </DropdownItem>
                                     <DropdownItem>
-                                        排班
-                </DropdownItem>
+                                        <NavLink href="/teacher">排班</NavLink>
+                                    </DropdownItem>
 
                                 </DropdownMenu>
                             </UncontrolledDropdown>
@@ -125,6 +125,7 @@ const Example = (props) => {
                     <Route exact path="/"></Route>
                     <Route path="/about"> <SecondPage />
                     </Route>
+                    <Route path="/teacher"><ThirdPage></ThirdPage></Route>
                 </Switch>
             </Router>
         </>

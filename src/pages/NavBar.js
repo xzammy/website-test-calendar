@@ -5,7 +5,6 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
-    NavItem,
     NavLink,
     UncontrolledDropdown,
     DropdownToggle,
@@ -13,59 +12,61 @@ import {
     DropdownItem,
 
 } from 'reactstrap';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SecondPage from '../secondpage';
-import ThirdPage from "../thirdPage";
+import { AiOutlineCalendar } from 'react-icons/ai';
+import { IconContext } from "react-icons";
 
-const Example = (props) => {
+const NavBar = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
     return (
         <>
-            <Router>
-                <Navbar color="light" light expand="md" nav-fill >
-                    <NavbarBrand href="/">致勝先師</NavbarBrand>
+            <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+                <Navbar color="inherit" light expand="md" nav-fill >
+
+                    <NavbarBrand href="/">  <AiOutlineCalendar size="1em"></AiOutlineCalendar>致勝先師</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/about">關於我們</NavLink>
-                            </NavItem>
+
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     排課規劃
               </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        <NavLink className="dropdown-item" to="/about">
+                                        <NavLink href="/calendar">
                                             瀏覽課表
       </NavLink>
 
                                     </DropdownItem>
                                     <DropdownItem>
-                                        編輯課表
-                </DropdownItem>
+                                        <NavLink href="/calendar">
+                                            編輯課表</NavLink>
+                                    </DropdownItem>
 
                                 </DropdownMenu>
                             </UncontrolledDropdown>
+
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     學生資訊
               </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
-                                        新增
-                </DropdownItem>
+                                        <NavLink href="/student">
+                                            新增</NavLink>
+                                    </DropdownItem>
                                     <DropdownItem>
-                                        修改
-                </DropdownItem>
-                                    <DropdownItem>
-                                        刪除
-                </DropdownItem>
-                                    <DropdownItem>
-                                        查詢
-                </DropdownItem>
+                                        <NavLink href="/student">
+                                            修改</NavLink>
+                                    </DropdownItem>
+                                    <DropdownItem><NavLink href="/student">
+                                        刪除</NavLink>
+                                    </DropdownItem>
+                                    <DropdownItem><NavLink href="/student">
+                                        查詢</NavLink>
+                                    </DropdownItem>
 
                                 </DropdownMenu>
                             </UncontrolledDropdown><UncontrolledDropdown nav inNavbar>
@@ -119,17 +120,11 @@ const Example = (props) => {
 
                     </Collapse>
                 </Navbar>
+            </IconContext.Provider>
 
 
-                <Switch>
-                    <Route exact path="/"></Route>
-                    <Route path="/about"> <SecondPage />
-                    </Route>
-                    <Route path="/teacher"><ThirdPage></ThirdPage></Route>
-                </Switch>
-            </Router>
         </>
     );
 }
 
-export default Example;
+export default NavBar

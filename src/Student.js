@@ -1,6 +1,9 @@
 import React from "react"
 import { Container, TextField, FormControl, InputLabel, Select, MenuItem, Typography, ListSubheader } from "@material-ui/core"
 
+
+
+
 const styles = (theme) => ({
     item: {
         paddingLeft: 3 * theme.spacing.unit,
@@ -11,7 +14,7 @@ const styles = (theme) => ({
     },
 });
 
-class SecondPage extends React.Component {
+class StudentPage extends React.Component {
 
     render() {
         return (
@@ -19,7 +22,7 @@ class SecondPage extends React.Component {
 
                 <Container maxWidth="sm" style={{ margin: `1em 1em 0 0` }} > <div>
                     <Typography variant="h3" >
-                        新增 學生資訊
+                        學生課表
 </Typography>
                     <TextField id="standard-required" label="學生姓名" />
                     <br />
@@ -93,5 +96,5 @@ class SecondPage extends React.Component {
     }
 }
 
-export default SecondPage
+export default StudentPage
 

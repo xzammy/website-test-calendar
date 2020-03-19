@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
-import { AppBar, Toolbar, Container, TextField, Button } from '@material-ui/core';
+import { Toolbar, Container, TextField, Button } from '@material-ui/core';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-
-
-function LoginPage() {
+const LoginPage = () => {
     return (
 
         <React.Fragment>
-            <AppBar position="fixed" >
-                <Toolbar>{"歡迎來到我的網站demo"}</Toolbar>
-            </AppBar>
+
             <Toolbar />
 
             <Container>

@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const basicAuth = require('express-basic-auth');
 const cookieParser = require('cookie-parser');
 const path = require('path');
@@ -63,3 +63,5 @@ app.get('/get-data', (req, res) => {
         res.end();
     }
 });
+
+*/

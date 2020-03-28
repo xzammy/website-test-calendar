@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
-import { Toolbar, Container, TextField, Button } from '@material-ui/core';
+import { TextField, Button } from '@material-ui/core';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-const LoginPage = () => {
-    return (
 
-        <React.Fragment>
 
-            <Toolbar />
 
-            <Container>
+
+class Login extends React.Component {
+    render() {
+        return (
+
+            <React.Fragment>
+
                 <hgroup>
                     <h1>請登入</h1>
                 </hgroup>
@@ -31,10 +33,9 @@ const LoginPage = () => {
                 </form>
 
 
-            </Container>
-        </React.Fragment>
+            </React.Fragment>
 
-    );
+        );
+    }
 }
-
-export default LoginPage;
+export default Login;

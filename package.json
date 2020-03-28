@@ -2,30 +2,40 @@
   "name": "website-test-calendar",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://localhost:3000/",
   "dependencies": {
-    "@fullcalendar/core": "^4.3.1",
-    "@fullcalendar/daygrid": "^4.3.0",
-    "@fullcalendar/react": "^4.3.0",
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
     "jquery": "^3.4.1",
+<<<<<<< HEAD
     "material-ui-icons": "^1.0.0-beta.36",
     "next": "^9.2.0",
+=======
+    "moment": "^2.24.0",
+>>>>>>> master
     "react": "^16.12.0",
+    "react-big-calendar": "^0.24.0",
     "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-router-form": "^3.0.0",
     "react-scripts": "3.3.0",
     "reactstrap": "^8.4.0",
     "typeface-roboto": "0.0.75",
+<<<<<<< HEAD
     "react-big-calendar": "^0.11.1",
     "style-loader": "^0.13.1",
     "superagent": "^3.3.1"
+=======
+    "vuera": "^0.2.7"
+>>>>>>> master
   },
   "scripts": {
     "start": "react-scripts start",
@@ -54,5 +64,18 @@
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "webpack-cli": "^3.3.10"
-  }
+  },
+  "description": "## Developed by Code Lab",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzammy/website-test-calendar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xzammy/website-test-calendar/issues"
+  },
+  "homepage": "https://github.com/xzammy/website-test-calendar#readme"
 }
